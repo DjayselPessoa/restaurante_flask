@@ -23,4 +23,9 @@ def index():
     conn.close()
     return render_template('index.html', categorias=categorias, pratos=pratos)
 
+#Rota para listar categorias
+@app.route("/admin")
+def admin_panel():
+    return render_template('admin/painel.html')
+
 app.run(debug=True)
